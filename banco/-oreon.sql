@@ -64,3 +64,14 @@ update planos set tipo = 'Turismo de estudos' where cod_plano=3;
 update pedido set descricao = 'Ecoturismo' where cod_pedido=1;
 update pedido set descricao = 'Turismo de estudos' where cod_pedido=2;
 update pedido set descricao = 'Turismo cultural' where cod_pedido=3;
+
+
+
+select pedido.cod_pedido as Código,
+cliente.nome as Nome,
+cliente.telefone as Telefone,
+pedido.descricao as Tipo,
+planos.descricao as Descrição
+from pedido
+inner join planos on planos.cod_plano=pedido.cod_plano
+inner join cliente on cliente.cod_cli=pedido.cod_cli;
