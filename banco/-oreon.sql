@@ -52,3 +52,15 @@ insert into pedido values
 (default,'4','4','2022-05-17','15:55:16','75.00','Turismo rural'),
 (default,'5','6','2022-05-17','15:55:16','65.00','Turismo de aventura'),
 (default,'6','5','2022-05-17','18:55:16','56.00','Turismo de esportes');
+
+update cliente set nome = 'Miguel' where cod_cli=1;
+update cliente set nome = 'Rafael' where cod_cli=2;
+update cliente set nome = 'Samuel' where cod_cli=3;
+
+update planos set tipo = 'Turismo cultural' where cod_plano=1;
+update planos set tipo = 'Ecoturismo' where cod_plano=2;
+update planos set tipo = 'Turismo de estudos' where cod_plano=3;
+
+update pedido set descricao = 'Ecoturismo' where cod_pedido=1;
+update pedido set descricao = 'Turismo de estudos' where cod_pedido=2;
+update pedido set descricao = 'Turismo cultural' where cod_pedido=3;
